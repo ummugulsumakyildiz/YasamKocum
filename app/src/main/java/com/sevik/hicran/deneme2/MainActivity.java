@@ -14,7 +14,6 @@ import android.widget.TabHost;
 public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton fab;
-    //Toolbar toolbar;
     TabHost tab;
     TabHost.TabSpec sayfa1,sayfa2;
 
@@ -33,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
                     transaction.replace(R.id.content,fragment,"FragmentName");
                     transaction.commit();
                     fab.show();
-                    //Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
-
 
                     return true;
                 case R.id.navigation_dashboard:
@@ -77,8 +74,6 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
-
-
         FloatingActionButton ekleButon = (FloatingActionButton) findViewById(R.id.fab);
         ekleButon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,16 +86,8 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Profilim");
         Profil fragment=new Profil();
         FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.content,fragment,"FragmentName");
+         transaction.replace(R.id.content,fragment,"FragmentName");
         transaction.commit();
-        //getSupportActionBar().hide();
-
-       // Toolbar toolbar=(Toolbar) findViewById(R.id.app_bar);
-        //setSupportActionBar(toolbar);
-
-
-
-
 
     }
 }
