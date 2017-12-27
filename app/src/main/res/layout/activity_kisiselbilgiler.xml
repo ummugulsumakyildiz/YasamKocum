@@ -50,7 +50,7 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:id="@+id/textViewName"
+            android:id="@+id/textViewSurame"
             android:layout_width="86dp"
             android:layout_height="wrap_content"
             android:text="SOYAD:" />

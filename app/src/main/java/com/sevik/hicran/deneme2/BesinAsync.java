@@ -25,8 +25,8 @@ public class BesinAsync extends AsyncTask<Void, Void, Void> {
     String data = "";
     ProgressDialog progressDialog;
     Context context;
-    //public static ArrayList<BesinModel> besinArraylist=new ArrayList<>();
-    public static ArrayList<String> besinArraylist = new ArrayList<>();
+    public static ArrayList<BesinModel> besinArraylist=new ArrayList<>();//
+    //public static ArrayList<String> besinArraylist = new ArrayList<>();
 
     public BesinAsync(Context ctx) {
         this.context = ctx;
@@ -35,7 +35,7 @@ public class BesinAsync extends AsyncTask<Void, Void, Void> {
     @Override
     protected Void doInBackground(Void... params) {
         try {
-            URL url = new URL("http://192.168.56.1:8080/");
+            URL url = new URL("http://10.34.143.174:8080/");
             HttpURLConnection baglanti = (HttpURLConnection) url.openConnection();
             InputStream inInputStream = baglanti.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(inInputStream));
@@ -76,8 +76,8 @@ public class BesinAsync extends AsyncTask<Void, Void, Void> {
                 besinNesne.setBesinAdi((String) object.getString("besin"));
                 besinNesne.setKalori((Integer) object.getInt("kalori"));
                 besinNesne.setMiktar((String) object.getString("birim"));
-                String besin = object.getString("besin") + "  " + object.getString("birim") + "  " + object.getInt("kalori");
-                besinArraylist.add(besin);
+
+                besinArraylist.add(besinNesne);
             }
             Fragment1.besinListView.setAdapter(Fragment1.adapter);
             progressDialog.hide();

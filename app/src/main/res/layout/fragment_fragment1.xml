@@ -18,18 +18,20 @@
             android:id="@+id/Besin"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
-            android:text="Besin" />
+            android:text="Besin"
+            android:layout_weight="0.11"
+            android:layout_marginLeft="20dp"/>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.02"
             android:text="Birim" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="123dp"
+            android:layout_width="54dp"
             android:layout_height="wrap_content"
             android:text="Kalori" />
 
