@@ -27,7 +27,6 @@ public class Profil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
         View view = inflater.inflate(R.layout.fragment_profil, container, false);
         DataBase vtIslemleri = new DataBase(view.getContext());
 
@@ -44,7 +43,7 @@ public class Profil extends Fragment {
         if (getirPersonel != null) {
             ad.setText(getirPersonel.getAd());
             soyAd.setText(getirPersonel.getSoyad());
-            boy.setText(String.valueOf(getirPersonel.getBoy()));
+            boy.setText(String.format("%.2f",getirPersonel.getBoy()));
             kilo.setText(String.valueOf(getirPersonel.getKilo()));
             yas.setText(String.valueOf(getirPersonel.getYas()));
             cinsiyet.setText(getirPersonel.getCinsiyet());
@@ -73,7 +72,7 @@ public class Profil extends Fragment {
 
     public float idealKiloHesapla(Person person) {
         float idealKilo = 0;
-        String boyConvert = String.valueOf(person.getBoy());
+        String boyConvert = String.format("%.2f",person.getBoy());
         int boyCm = Integer.parseInt(boyConvert.replace(".", ""));
         switch (person.getCinsiyet()) {
             case "Erkek":

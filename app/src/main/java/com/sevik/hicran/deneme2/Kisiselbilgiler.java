@@ -1,5 +1,6 @@
 package com.sevik.hicran.deneme2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,14 @@ public class Kisiselbilgiler extends AppCompatActivity {
          boy=(EditText)findViewById(R.id.editTextHeight);
          yas=(EditText)findViewById(R.id.editTextage);
          radioGroup = (RadioGroup)findViewById(R.id.radioGrup);
+        Button btnProfile = (Button) findViewById(R.id.btnProfile);
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gecis= new Intent(Kisiselbilgiler.this,MainActivity.class);
+                startActivity(gecis);
+            }
+        });
         Button kaydet=(Button)findViewById(R.id.buttonKaydet);
         kaydet.setOnClickListener(new View.OnClickListener() {
             @Override

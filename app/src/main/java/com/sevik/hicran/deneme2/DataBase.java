@@ -76,7 +76,6 @@ public class DataBase extends SQLiteOpenHelper {
         int kolonYas=c.getColumnIndex(ROW_AGE);//
         int kolonCinsiyet=c.getColumnIndex(ROW_GENDER);
 
-
         try {
             c.moveToLast();
             personel.setAd(c.getString(kolonAd));
@@ -85,7 +84,6 @@ public class DataBase extends SQLiteOpenHelper {
             personel.setKilo(c.getFloat(kolonKilo));
             personel.setBoy(c.getFloat(kolonBoy));
             personel.setYas(c.getInt(kolonYas));
-
         }
         catch (Exception e){
             return  null;
@@ -96,5 +94,4 @@ public class DataBase extends SQLiteOpenHelper {
         }
         return personel;
     }
-
 }
